@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyushCosmo | Premium & Affordable Ayurvedic Cosmetics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        herbal: {
+                            50: '#f3f7f4',
+                            100: '#e2ece6',
+                            200: '#c5dacd',
+                            300: '#9cbca9',
+                            400: '#6f9780',
+                            500: '#4e7963',
+                            600: '#3c5f4d',
+                            700: '#324e40',
+                            800: '#283e33',
+                            900: '#1a2921',
+                            950: '#0e1713',
+                        },
+                        gold: {
+                            50: '#fbf9ee',
+                            100: '#f5edd1',
+                            200: '#ebd9a3',
+                            300: '#dfbe6d',
+                            400: '#d19f3f',
+                            500: '#be872e',
+                            600: '#a36d26',
+                            700: '#835220',
+                            800: '#6b411f',
+                            900: '#5a361d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth transition for sliding mechanics */
+        .slide-transition {
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Custom scrollbar matching the green botanical theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f3f7f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4e7963;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3c5f4d;
+        }
+    </style>
+</head>
+<body class="bg-herbal-50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-herbal-100 transition-all duration-300 shadow-sm" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo Block: Dynamic SVG with Custom Ayurvedic Leaf Droplet Design -->
+                <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="relative w-12 h-12 flex items-center justify-center bg-herbal-900 rounded-xl overflow-hidden shadow-md group-hover:bg-herbal-800 transition-colors duration-300">
+                        <svg viewBox="0 0 100 100" class="w-8 h-8 select-none">
+                            <defs>
+                                <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ebd9a3" />
+                                    <stop offset="50%" stop-color="#be872e" />
+                                    <stop offset="100%" stop-color="#835220" />
+                                </linearGradient>
+                                <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#9cbca9" />
+                                    <stop offset="100%" stop-color="#4e7963" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Elegant Leaf Shape representing herbal purity -->
+                            <path d="M50,15 C70,15 85,35 85,55 C85,75 65,85 50,85 C35,85 15,75 15,55 C15,35 30,15 50,15 Z" fill="none" stroke="url(#leafGradient)" stroke-width="4" />
+                            <!-- Inner Gold Droplet representing luxury, concentrated Ayurvedic oil extraction -->
+                            <path d="M50,30 C60,45 68,52 68,62 C68,72 60,80 50,80 C40,80 32,72 32,62 C32,52 40,45 50,30 Z" fill="url(#goldGradient)" />
+                            <!-- Center Accent line -->
+                            <path d="M50,15 L50,85" stroke="rgba(255, 255, 255, 0.15)" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-herbal-900 leading-none group-hover:text-herbal-700 transition-colors duration-300">AyushCosmo</span>
+                        <span class="text-[9px] tracking-[0.25em] uppercase font-bold text-gold-600 mt-1">Harm-Free & Affordable</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-semibold text-herbal-900 hover:text-gold-600 transition-colors duration-300">Home</a>
+                    <a href="#vision" class="text-sm font-semibold text-herbal-700 hover:text-gold-600 transition-colors duration-300">Our Vision</a>
+                    <a href="#products" class="text-sm font-semibold text-herbal-700 hover:text-gold-600 transition-colors duration-300">Our Range</a>
+                    <a href="#inquiry" class="text-sm font-semibold text-herbal-700 hover:text-gold-600 transition-colors duration-300">Inquiry Desk</a>
+                    <a href="#contact" class="text-sm font-semibold text-herbal-700 hover:text-gold-600 transition-colors duration-300">Location</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#inquiry" class="inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-herbal-850 rounded-lg hover:bg-gold-600 focus:ring-4 focus:ring-gold-100 transition-all duration-300 shadow-md">
+                        <i class="fa-solid fa-paper-plane mr-2 animate-pulse"></i> Custom Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Button (Burger Menu) -->
+                <button type="button" class="md:hidden flex items-center justify-center p-2 rounded-lg text-herbal-800 hover:bg-herbal-100 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div class="hidden md:hidden bg-white border-t border-herbal-100 transition-all duration-300 shadow-inner" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2.5 rounded-lg text-base font-medium text-herbal-900 hover:bg-herbal-50 hover:text-gold-600 transition-all">Home</a>
+                <a href="#vision" class="block px-3 py-2.5 rounded-lg text-base font-medium text-herbal-700 hover:bg-herbal-50 hover:text-gold-600 transition-all">Our Vision</a>
+                <a href="#products" class="block px-3 py-2.5 rounded-lg text-base font-medium text-herbal-700 hover:bg-herbal-50 hover:text-gold-600 transition-all">Our Range</a>
+                <a href="#inquiry" class="block px-3 py-2.5 rounded-lg text-base font-medium text-herbal-700 hover:bg-herbal-50 hover:text-gold-600 transition-all">Inquiry Desk</a>
+                <a href="#contact" class="block px-3 py-2.5 rounded-lg text-base font-medium text-herbal-700 hover:bg-herbal-50 hover:text-gold-600 transition-all">Location</a>
+                <div class="pt-4 px-3">
+                    <a href="#inquiry" class="w-full inline-flex items-center justify-center px-4 py-3 text-sm font-bold uppercase tracking-wide text-white bg-herbal-800 rounded-lg hover:bg-gold-600 transition-all">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Submit Inquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Slider Section -->
+    <section id="home" class="relative pt-20 overflow-hidden bg-herbal-950 min-h-[90vh] flex items-center">
+        <!-- Background Overlay / Ambience -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/85 z-10"></div>
+        
+        <!-- Slider Track -->
+        <div class="absolute inset-0 w-full h-full flex" id="slider-track">
+            
+            <!-- Slide 1: Facial Products -->
+            <div class="min-w-full w-full h-full relative flex-shrink-0 flex items-center">
+                <img src="https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&q=80&w=1920" 
+                     alt="Facial Cosmetics Essence" 
+                     class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 transition-all duration-[8000ms]"
+                     onerror="this.src='https://placehold.co/1920x1080/0f1b15/ffffff?text=Premium+Facial+Ayurvedic+Cosmetics'">
+                <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-2xl text-white">
+                        <span class="inline-block px-3 py-1 bg-gold-600 text-[10px] tracking-widest font-bold uppercase rounded-full mb-4">Timeless Divine Glow</span>
+                        <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight mb-4 leading-tight">
+                            Ayurvedic <span class="text-gold-400 italic font-normal">Facial</span> Care
+                        </h1>
+                        <p class="text-sm sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
+                            Restore pure, luminous tone using Saffron extracts, wild honey, and authentic Vedic Kumkumadi formulas. Formulated to defend skin and keep it healthy without harsh chemicals.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#products" onclick="setProductFilter('facial')" class="px-6 py-3.5 bg-herbal-600 hover:bg-herbal-500 text-white font-bold rounded-lg uppercase tracking-wider text-xs shadow-lg transition-all transform hover:-translate-y-0.5">Explore Facial Range</a>
+                            <a href="#vision" class="px-6 py-3.5 bg-transparent border border-white/40 hover:border-white hover:bg-white/10 text-white font-bold rounded-lg uppercase tracking-wider text-xs transition-all">Our Vision</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Hair Care Products -->
+            <div class="min-w-full w-full h-full relative flex-shrink-0 flex items-center">
+                <img src="https://images.unsplash.com/photo-1527799851257-35939e095184?auto=format&fit=crop&q=80&w=1920" 
+                     alt="Hair Care Ayurvedic Rituals" 
+                     class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 transition-all duration-[8000ms]"
+                     onerror="this.src='https://placehold.co/1920x1080/0f1b15/ffffff?text=Bhringraj+Hair+Care+Rituals'">
+                <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-2xl text-white">
+                        <span class="inline-block px-3 py-1 bg-gold-600 text-[10px] tracking-widest font-bold uppercase rounded-full mb-4">Pure Scalp Nourishment</span>
+                        <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight mb-4 leading-tight">
+                            Ayurvedic <span class="text-gold-400 italic font-normal">Hair</span> Therapy
+                        </h1>
+                        <p class="text-sm sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
+                            Infused with Bhringraj, Shikakai, and Amla. Reclaim voluminous, strong locks with natural botanical cleansers that replace dry sulfates and silicone entirely.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#products" onclick="setProductFilter('hair')" class="px-6 py-3.5 bg-herbal-600 hover:bg-herbal-500 text-white font-bold rounded-lg uppercase tracking-wider text-xs shadow-lg transition-all transform hover:-translate-y-0.5">Explore Hair Therapy</a>
+                            <a href="#vision" class="px-6 py-3.5 bg-transparent border border-white/40 hover:border-white hover:bg-white/10 text-white font-bold rounded-lg uppercase tracking-wider text-xs transition-all">Our Vision</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Skin Care Products -->
+            <div class="min-w-full w-full h-full relative flex-shrink-0 flex items-center">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=1920" 
+                     alt="Skin Care Botanical Hydration" 
+                     class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 transition-all duration-[8000ms]"
+                     onerror="this.src='https://placehold.co/1920x1080/0f1b15/ffffff?text=Chandan+Body+Nourishment'">
+                <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-2xl text-white">
+                        <span class="inline-block px-3 py-1 bg-gold-600 text-[10px] tracking-widest font-bold uppercase rounded-full mb-4">Nectar of the Earth</span>
+                        <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight mb-4 leading-tight">
+                            Ayurvedic <span class="text-gold-400 italic font-normal">Skin</span> Elixirs
+                        </h1>
+                        <p class="text-sm sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
+                            Drench your skin in sandalwood, turmeric, and organic aloe vera pulp. Light, whipped body moisturizers crafted for complete environmental defense.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#products" onclick="setProductFilter('skin')" class="px-6 py-3.5 bg-herbal-600 hover:bg-herbal-500 text-white font-bold rounded-lg uppercase tracking-wider text-xs shadow-lg transition-all transform hover:-translate-y-0.5">Explore Skin Elixirs</a>
+                            <a href="#vision" class="px-6 py-3.5 bg-transparent border border-white/40 hover:border-white hover:bg-white/10 text-white font-bold rounded-lg uppercase tracking-wider text-xs transition-all">Our Vision</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <button id="prev-slide" class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-white/20 bg-black/40 text-white flex items-center justify-center hover:bg-gold-600 hover:border-transparent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <button id="next-slide" class="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-white/20 bg-black/40 text-white flex items-center justify-center hover:bg-gold-600 hover:border-transparent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500">
+            <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+
+        <!-- Slider Pagination Indicators -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+            <button class="slider-dot w-8 h-1.5 rounded-full bg-white transition-all duration-300" data-slide="0"></button>
+            <button class="slider-dot w-3 h-1.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" data-slide="1"></button>
+            <button class="slider-dot w-3 h-1.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" data-slide="2"></button>
+        </div>
+    </section>
+
+
+    <!-- Core Vision & Philosophy Section -->
+    <section id="vision" class="py-20 sm:py-28 bg-white relative overflow-hidden">
+        <!-- Subtle floating graphic elements -->
+        <div class="absolute top-20 left-0 w-64 h-64 bg-herbal-50 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 right-0 w-80 h-80 bg-gold-50 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-600 font-bold tracking-[0.2em] text-xs uppercase block mb-3">Our Founding Pledge</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-herbal-950 mb-4 leading-tight">The Sacred Philosophy of AyushCosmo</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    We believe pure self-care is a basic birthright, not an exclusive luxury. By directly sourcing active botanical extracts and blending them using advanced, non-destructive molecular methods, we fulfill a singular mission: delivering authentic Ayurvedic beauty.
+                </p>
+            </div>
+
+            <!-- Vision Spotlight Banner (Bold Highlight of user's core vision requirement) -->
+            <div class="bg-gradient-to-br from-herbal-900 to-herbal-950 rounded-3xl p-8 sm:p-12 text-white mb-20 shadow-xl relative overflow-hidden">
+                <!-- Golden light halo background -->
+                <div class="absolute -right-12 -bottom-12 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute -left-12 -top-12 w-96 h-96 bg-herbal-500/10 rounded-full blur-3xl"></div>
+
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-gold-600/30 border border-gold-500/30 rounded-full text-gold-300 text-xs font-semibold tracking-wider uppercase">
+                            <i class="fa-solid fa-circle-check text-[10px]"></i> Core Corporate Vision
+                        </div>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight">
+                            Harm-Free Ayurvedic Products at <span class="text-gold-400 italic font-normal">Affordable Rates</span>
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                            High-end cosmetic brands often inflate price points through complex middlemen. At AyushCosmo, we engineer and pack our formulations locally within Gujarat's manufacturing sector. We bypass inflated markups to deliver clinical-grade, zero-toxin skincare that is exceptionally gentle on your body and highly accessible to your budget.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4">
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-center gap-4 flex-1">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">100% Harm-Free</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Zero parabens, sulfates, silicones, or heavy metals.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-center gap-4 flex-1">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Affordable Pricing</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Direct-from-lab rates with zero luxury markup.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-herbal-50 p-8 rounded-2xl border border-herbal-100 hover:shadow-xl hover:shadow-herbal-900/5 hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-herbal-800 text-2xl shadow-sm group-hover:bg-herbal-900 group-hover:text-white transition-all duration-300 mb-6">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-herbal-950 mb-3">100% Earth Sourced</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Ethically collected botanicals from clean Himalayan zones and local organic farms. No chemical fertilizers, pesticides, or toxin pathways.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-herbal-50 p-8 rounded-2xl border border-herbal-100 hover:shadow-xl hover:shadow-herbal-900/5 hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-herbal-800 text-2xl shadow-sm group-hover:bg-herbal-900 group-hover:text-white transition-all duration-300 mb-6">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-herbal-950 mb-3">Scientific Extraction</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        We extract herbal essences using safe low-temperature technologies to preserve organic molecular qualities without degrading active micro-nutrients.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-herbal-50 p-8 rounded-2xl border border-herbal-100 hover:shadow-xl hover:shadow-herbal-900/5 hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-herbal-800 text-2xl shadow-sm group-hover:bg-herbal-900 group-hover:text-white transition-all duration-300 mb-6">
+                        <i class="fa-solid fa-people-carry-box"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-herbal-950 mb-3">Zero Cruelty Ever</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Formulated following non-harming (Ahimsa) principles. We test rigorously on self-care panels under dermatologist supervision, never on animals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Product Catalog Section -->
+    <section id="products" class="py-20 bg-herbal-100/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-gold-600 font-bold tracking-[0.2em] text-xs uppercase block mb-2">Our Pure Apothecary</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-herbal-950 mb-4">AyushCosmo Collections</h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Select a category below to explore. Click on any item to view its natural ingredients, specific benefits, and usage instructions.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 mb-12">
+                <button onclick="filterProducts('all')" id="btn-filter-all" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm bg-herbal-900 text-white">
+                    All Products
+                </button>
+                <button onclick="filterProducts('facial')" id="btn-filter-facial" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm bg-white text-herbal-800 hover:bg-herbal-200">
+                    Facial Care
+                </button>
+                <button onclick="filterProducts('hair')" id="btn-filter-hair" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm bg-white text-herbal-800 hover:bg-herbal-200">
+                    Hair Care
+                </button>
+                <button onclick="filterProducts('skin')" id="btn-filter-skin" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm bg-white text-herbal-800 hover:bg-herbal-200">
+                    Skin Care
+                </button>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+                
+                <!-- Product 1 (Facial) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="facial">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&q=80&w=600" 
+                             alt="Kumkumadi Glow Serum" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Kumkumadi+Serum'">
+                        <span class="absolute top-4 left-4 bg-gold-600 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full">Top Seller</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Facial Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Kumkumadi Radiant Glow Serum</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            Premium, non-greasy facial oil formulation containing Kashmiri Saffron and 16 therapeutic botanical herbs to revitalize tired skin.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">Pure Herbal Elixir</span>
+                            <button onclick="openProductModal(0)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 (Facial) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="facial">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=600" 
+                             alt="Tejasvi Radiance Face Cream" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Tejasvi+Face+Cream'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Facial Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Tejasvi Radiance Face Cream</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            Nourishing face cream loaded with organic honey, pure cold-pressed almond oil, and hand-churned Ayurvedic cow's ghee.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">Deep Skin Nutrition</span>
+                            <button onclick="openProductModal(1)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 (Facial) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="facial">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=600" 
+                             alt="Neem & Basil Cleanser" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Neem+Basil+Cleanser'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Facial Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Neem & Basil Purifying Gel</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            Gentle, sulfate-free facial cleanser made with cooling aloe vera and pure extracts of Neem and Holy Basil.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">pH Balanced Formula</span>
+                            <button onclick="openProductModal(2)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 (Hair Care) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="hair">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&q=80&w=600" 
+                             alt="Bhringraj Hair Growth Oil" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Bhringraj+Hair+Oil'">
+                        <span class="absolute top-4 left-4 bg-gold-600 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full">Top Rated</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Hair Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Bhringraj & Amla Growth Oil</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            Deeply nourishing hair tonic made with Bhringraj, Shikakai, and Amla extracts to strengthen roots and protect hair.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">Deep Root Revitalizer</span>
+                            <button onclick="openProductModal(3)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 (Hair Care) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="hair">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=600" 
+                             alt="Shikakai Hair Cleanser" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Shikakai+Shampoo'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Hair Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Shikakai & Reetha Cleanser</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            Sulfate-free, chemical-free shampoo formulated with natural soapnuts and conditioning Shikakai pods.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">100% Surfactant Free</span>
+                            <button onclick="openProductModal(4)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 (Hair Care) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="hair">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1527799851257-35939e095184?auto=format&fit=crop&q=80&w=600" 
+                             alt="Hibiscus Conditioning Mask" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Hibiscus+Hair+Masque'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Hair Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Hibiscus Deep Conditioning Masque</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            Rich, whipped treatment masque containing red hibiscus petals, fresh coconut milk extract, and organic honey.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">Intense Moisture Balance</span>
+                            <button onclick="openProductModal(5)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 (Skin Care) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="skin">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=600" 
+                             alt="Chandan Turmeric Body Butter" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Chandan+Body+Butter'">
+                        <span class="absolute top-4 left-4 bg-gold-600 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full">New Arrival</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Skin Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Chandan & Turmeric Body Butter</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            Rich skin cream formulated with pure sandalwood (Chandan), turmeric root oil, and whipped African shea butter.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">24-Hour Hydration</span>
+                            <button onclick="openProductModal(6)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 (Skin Care) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="skin">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?auto=format&fit=crop&q=80&w=600" 
+                             alt="Eladi Hydrating Lotion" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Eladi+Hydrating+Lotion'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Skin Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Eladi Hydrating Body Lotion</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            Lightweight moisturizing body lotion enriched with classical Eladi oils, cardamom seed extract, and coconut milk.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">Velvety Smooth Skin</span>
+                            <button onclick="openProductModal(7)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 (Skin Care) -->
+                <div class="product-item bg-white rounded-2xl overflow-hidden border border-herbal-200/45 shadow-md hover:shadow-xl transition-all duration-300 group" data-category="skin">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-herbal-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600" 
+                             alt="Rose Aloe Refreshing Mist" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x450/f3f7f4/324e40?text=Rose+Body+Mist'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gold-600 font-semibold tracking-wide uppercase">Skin Care</span>
+                        <h3 class="font-serif text-xl font-bold text-herbal-950 mt-1 mb-2">Rose & Aloe Refreshing Mist</h3>
+                        <p class="text-slate-500 text-xs line-clamp-2 mb-4">
+                            A refreshing, hydrating mist formulated with steam-distilled Indian white roses and organic aloe vera pulp.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <span class="text-xs font-medium text-slate-400">Instantly Hydrating</span>
+                            <button onclick="openProductModal(8)" class="text-xs font-bold uppercase tracking-wider text-herbal-800 hover:text-gold-600 transition-colors focus:outline-none">
+                                View Details <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Product Details Modal Window -->
+    <div id="product-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" role="dialog" aria-modal="true">
+        <!-- Backdrop with blur effect -->
+        <div class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm transition-opacity" onclick="closeProductModal()"></div>
+        
+        <!-- Modal Position Wrapper -->
+        <div class="flex min-h-screen items-center justify-center p-4 text-center sm:p-0">
+            <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl border border-herbal-100 flex flex-col md:flex-row max-h-[90vh] md:max-h-none overflow-y-auto">
+                
+                <!-- Close Button -->
+                <button onclick="closeProductModal()" class="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-gold-600 hover:text-white transition-all shadow focus:outline-none" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+
+                <!-- Product Image Gallery View (Left) -->
+                <div class="w-full md:w-1/2 bg-herbal-50 flex items-center justify-center relative p-6 md:p-12 min-h-[250px] md:min-h-[450px]">
+                    <img id="modal-img" src="" alt="" class="max-w-full max-h-[280px] object-contain drop-shadow-lg rounded-lg">
+                    <div class="absolute bottom-4 left-4">
+                        <span id="modal-category" class="inline-block px-3 py-1 bg-herbal-800 text-white text-[10px] font-bold tracking-widest uppercase rounded-full"></span>
+                    </div>
+                </div>
+
+                <!-- Product Text Info View (Right) -->
+                <div class="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-between bg-white">
+                    <div class="space-y-4">
+                        <h3 id="modal-title" class="font-serif text-2xl sm:text-3xl font-bold text-herbal-950 leading-snug"></h3>
+                        
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-gold-600 block mb-1">Product Essence & Vision:</span>
+                            <p id="modal-desc" class="text-slate-600 text-sm leading-relaxed"></p>
+                        </div>
+
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-gold-600 block mb-1">Key Botanical Ingredients:</span>
+                            <p id="modal-ingredients" class="text-slate-600 text-sm italic font-medium"></p>
+                        </div>
+
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-gold-600 block mb-1">Ritual & Usage:</span>
+                            <p id="modal-usage" class="text-slate-600 text-sm leading-relaxed"></p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3 mt-6">
+                        <button id="modal-inquire-btn" class="flex-1 inline-flex items-center justify-center px-5 py-3 text-xs font-bold uppercase tracking-wider text-white bg-herbal-900 rounded-lg hover:bg-gold-600 transition-colors shadow focus:outline-none">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Select For Inquiry
+                        </button>
+                        <button onclick="closeProductModal()" class="px-5 py-3 border border-slate-200 text-xs font-bold uppercase tracking-wider text-slate-600 rounded-lg hover:bg-slate-50 transition-colors focus:outline-none">
+                            Keep Browsing
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Interactive Inquiry Desk Section -->
+    <section id="inquiry" class="py-20 sm:py-28 bg-white relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-herbal-100/30 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Information Deck (Left) -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-gold-600 font-bold tracking-[0.2em] text-xs uppercase block mb-2">B2B, Retail & Personal Inquiries</span>
+                        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-herbal-950 mb-4 leading-tight">Connect With Our Specialists</h2>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Looking for high-quality Ayurvedic products customized for retail boutiques, clean wellness spas, or personal home routines? Drop a message and let us guide you toward the right, affordable solution.
+                        </p>
+                    </div>
+
+                    <!-- Trust Cards -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-herbal-50 border border-herbal-100/50">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-herbal-800 shadow-sm flex-shrink-0">
+                                <i class="fa-solid fa-truck-ramp-box"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-herbal-950">Bulk & Custom Volume Packs</h4>
+                                <p class="text-slate-500 text-xs leading-relaxed">Bespoke sizing options for boutique spas and natural medical treatment centers.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-herbal-50 border border-herbal-100/50">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-herbal-800 shadow-sm flex-shrink-0">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-herbal-950">Certified Ingredients</h4>
+                                <p class="text-slate-500 text-xs leading-relaxed">Full technical ingredient specifications sheet supplied with bulk distributions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Interactive Form (Right) -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-herbal-200/50 shadow-xl shadow-herbal-950/5 relative overflow-hidden">
+                        
+                        <!-- Form Header -->
+                        <div class="mb-8">
+                            <h3 class="font-serif text-2xl font-bold text-herbal-950">AyushCosmo Inquiry Form</h3>
+                            <p class="text-slate-500 text-xs mt-1">Please fill up details below; fields marked with * are necessary.</p>
+                        </div>
+
+                        <!-- Dynamic Submission Screen (Shown after successful post) -->
+                        <div id="success-overlay" class="absolute inset-0 bg-white flex flex-col items-center justify-center p-8 text-center z-20 hidden">
+                            <div class="w-20 h-20 bg-herbal-100 text-herbal-800 rounded-full flex items-center justify-center text-4xl mb-6 shadow-inner animate-bounce">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h4 class="font-serif text-2xl font-bold text-herbal-950 mb-2">Inquiry Successfully Sent!</h4>
+                            <p class="text-slate-500 text-sm max-w-md mx-auto mb-6">
+                                Thank you for contacting AyushCosmo. Your specific inquiry request has been directed to our Ayurveda specialist desk. We will revert with complete technical quotes within 12 business hours.
+                            </p>
+                            <button onclick="resetInquiryForm()" class="px-6 py-2.5 bg-herbal-900 text-white font-bold rounded-lg uppercase tracking-wider text-xs hover:bg-gold-600 transition-all focus:outline-none">
+                                Send Another Inquiry
+                            </button>
+                        </div>
+
+                        <form id="inquiry-form" onsubmit="handleInquirySubmit(event)" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5" for="name">Your Name *</label>
+                                    <input type="text" id="name" required class="w-full px-4 py-3 text-sm bg-herbal-50 border border-slate-200 rounded-xl focus:outline-none focus:border-herbal-600 focus:bg-white transition-all" placeholder="Enter name">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5" for="phone">Phone / Mobile *</label>
+                                    <input type="tel" id="phone" required class="w-full px-4 py-3 text-sm bg-herbal-50 border border-slate-200 rounded-xl focus:outline-none focus:border-herbal-600 focus:bg-white transition-all" placeholder="+91 XXXXX XXXXX">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5" for="email">Email Address *</label>
+                                    <input type="email" id="email" required class="w-full px-4 py-3 text-sm bg-herbal-50 border border-slate-200 rounded-xl focus:outline-none focus:border-herbal-600 focus:bg-white transition-all" placeholder="you@example.com">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5" for="interest">Interested Category *</label>
+                                    <select id="interest" required class="w-full px-4 py-3 text-sm bg-herbal-50 border border-slate-200 rounded-xl focus:outline-none focus:border-herbal-600 focus:bg-white transition-all text-slate-600">
+                                        <option value="">-- Choose Category --</option>
+                                        <option value="facial">Facial Products</option>
+                                        <option value="hair">Hair & Care Products</option>
+                                        <option value="skin">Skin Care Products</option>
+                                        <option value="all">Multiple Categories</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5" for="product-name">Targeted Product (Optional)</label>
+                                <input type="text" id="product-name" class="w-full px-4 py-3 text-sm bg-herbal-50 border border-slate-200 rounded-xl focus:outline-none focus:border-herbal-600 focus:bg-white transition-all" placeholder="e.g. Kumkumadi Glow Serum (or leave blank)">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5" for="message">Detailed Message / Volume Requirements</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 text-sm bg-herbal-50 border border-slate-200 rounded-xl focus:outline-none focus:border-herbal-600 focus:bg-white transition-all" placeholder="Let us know what you need..."></textarea>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3.5 bg-herbal-800 text-white font-bold uppercase tracking-wider text-xs rounded-xl hover:bg-gold-600 transition-all duration-300 shadow-md focus:outline-none" id="submit-btn">
+                                    <span id="submit-text">Submit Dynamic Inquiry</span>
+                                    <i class="fa-solid fa-paper-plane ml-2" id="submit-icon"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Details & Map Section -->
+    <section id="contact" class="py-20 bg-herbal-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-gold-600 font-bold tracking-[0.2em] text-xs uppercase block mb-2">Our Headquarters</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-herbal-950 mb-4">Location & Corporate Office</h2>
+                <p class="text-slate-600 text-sm">
+                    Our formulation processing laboratory, clean packing center, and distribution hub are located directly within Jamnagar's industrial sector.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                <!-- Contact Cards -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                    <!-- Jamnagar Address Block -->
+                    <div class="bg-white p-8 rounded-3xl border border-herbal-200/40 shadow-md hover:shadow-lg transition-all space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-herbal-100 text-herbal-800 flex items-center justify-center text-xl shadow-inner">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] tracking-widest font-bold uppercase text-gold-600">Registered Corporate Unit</span>
+                            <h4 class="font-serif text-2xl font-bold text-herbal-950 mt-1 mb-2">AyushCosmo Headquarters</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                GIDC Phase 3, Plot no. 1010,<br>Jamnagar, Gujarat, India.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Phone Block -->
+                    <div class="bg-white p-8 rounded-3xl border border-herbal-200/40 shadow-md hover:shadow-lg transition-all space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-herbal-100 text-herbal-800 flex items-center justify-center text-xl shadow-inner">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] tracking-widest font-bold uppercase text-gold-600">Direct Extraction Lab Desk</span>
+                            <h4 class="font-serif text-2xl font-bold text-herbal-950 mt-1 mb-2">Let's Communicate</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                <strong>Direct Helpline:</strong> +91 288 2451010<br>
+                                <strong>Technical Support Email:</strong> contact@ayushcosmo.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Elegant Simulated Interactive Map -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-4 rounded-3xl border border-herbal-200/40 shadow-md h-full flex flex-col min-h-[350px]">
+                        <div class="relative flex-1 bg-herbal-900 rounded-2xl overflow-hidden flex items-center justify-center group">
+                            <!-- High quality schematic vector grid styling -->
+                            <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <defs>
+                                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                                    </pattern>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#grid)" />
+                            </svg>
+
+                            <!-- Custom Minimalist Map UI overlay graphic representing Jamnagar GIDC -->
+                            <div class="absolute inset-0 flex items-center justify-center text-center p-6 bg-gradient-to-br from-herbal-950 via-herbal-900 to-herbal-950">
+                                <div class="space-y-4 relative z-10">
+                                    <!-- Target pin bounce -->
+                                    <div class="relative inline-flex mb-2">
+                                        <div class="absolute -inset-2 bg-gold-400 rounded-full blur animate-ping opacity-60"></div>
+                                        <div class="w-14 h-14 rounded-full bg-gold-500 text-herbal-950 flex items-center justify-center text-2xl shadow-lg shadow-gold-500/30">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-gold-200 text-xs font-bold uppercase tracking-widest">AyushCosmo GPS Coordinate</h5>
+                                        <p class="text-white font-serif text-xl font-semibold mt-1">GIDC Phase 3, Plot 1010</p>
+                                        <p class="text-slate-300 text-xs mt-1 max-w-sm mx-auto">
+                                            Our processing factory unit is easily accessible off the state highway corridor in Jamnagar, Gujarat.
+                                        </p>
+                                    </div>
+                                    <div class="pt-2">
+                                        <a href="https://maps.google.com/?q=GIDC+Phase+3+Jamnagar+Gujarat" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-herbal-950 text-xs font-bold uppercase rounded-lg shadow hover:bg-gold-500 hover:text-herbal-950 transition-colors">
+                                            <i class="fa-solid fa-directions text-sm"></i> Navigate via Google Maps
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-herbal-950 text-white pt-16 pb-8 border-t border-herbal-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Col 1: Brand details -->
+                <div class="space-y-6">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-10 h-10 flex items-center justify-center bg-white rounded-lg overflow-hidden">
+                            <svg viewBox="0 0 100 100" class="w-7 h-7">
+                                <path d="M50,15 C70,15 85,35 85,55 C85,75 65,85 50,85 C35,85 15,75 15,55 C15,35 30,15 50,15 Z" fill="none" stroke="#3c5f4d" stroke-width="4" />
+                                <path d="M50,30 C60,45 68,52 68,62 C68,72 60,80 50,80 C40,80 32,72 32,62 C32,52 40,45 50,30 Z" fill="#be872e" />
+                            </svg>
+                        </div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-white">AyushCosmo</span>
+                    </a>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm font-light">
+                        Integrating organic Ayurvedic care directly with sustainable green science to make toxin-free, affordable beauty accessible for everyone.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-herbal-900 border border-slate-700/50 flex items-center justify-center text-sm text-slate-300 hover:bg-gold-600 hover:text-white hover:border-transparent transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-herbal-900 border border-slate-700/50 flex items-center justify-center text-sm text-slate-300 hover:bg-gold-600 hover:text-white hover:border-transparent transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-herbal-900 border border-slate-700/50 flex items-center justify-center text-sm text-slate-300 hover:bg-gold-600 hover:text-white hover:border-transparent transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-herbal-900 border border-slate-700/50 flex items-center justify-center text-sm text-slate-300 hover:bg-gold-600 hover:text-white hover:border-transparent transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Categories -->
+                <div>
+                    <h5 class="text-sm font-bold uppercase tracking-wider text-gold-400 mb-6">Our Formulations</h5>
+                    <ul class="space-y-3.5">
+                        <li><a href="#products" onclick="setProductFilter('facial')" class="text-xs text-slate-400 hover:text-white transition-colors font-light">Facial Care Range</a></li>
+                        <li><a href="#products" onclick="setProductFilter('hair')" class="text-xs text-slate-400 hover:text-white transition-colors font-light">Hair Care & Therapy</a></li>
+                        <li><a href="#products" onclick="setProductFilter('skin')" class="text-xs text-slate-400 hover:text-white transition-colors font-light">Skin Care & Dermal Butter</a></li>
+                        <li><a href="#vision" class="text-xs text-slate-400 hover:text-white transition-colors font-light">Affordability Principles</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Useful Links -->
+                <div>
+                    <h5 class="text-sm font-bold uppercase tracking-wider text-gold-400 mb-6">Explore</h5>
+                    <ul class="space-y-3.5">
+                        <li><a href="#home" class="text-xs text-slate-400 hover:text-white transition-colors font-light">Home Page</a></li>
+                        <li><a href="#vision" class="text-xs text-slate-400 hover:text-white transition-colors font-light">Core Vision</a></li>
+                        <li><a href="#inquiry" class="text-xs text-slate-400 hover:text-white transition-colors font-light">B2B Order Form</a></li>
+                        <li><a href="#contact" class="text-xs text-slate-400 hover:text-white transition-colors font-light">Headquarters</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Corporate Info -->
+                <div>
+                    <h5 class="text-sm font-bold uppercase tracking-wider text-gold-400 mb-6">Headquarters</h5>
+                    <p class="text-xs text-slate-400 leading-relaxed space-y-2 font-light">
+                        <span class="block text-white font-medium">AyushCosmo Products</span>
+                        GIDC Phase 3, Plot no. 1010,<br>
+                        Jamnagar, Gujarat, India.<br>
+                        <span class="block pt-3 text-white font-medium">Technical Support:</span>
+                        +91 288 2451010
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-herbal-900 text-center flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-[11px] text-slate-500 font-light">
+                    &copy; 2026 AyushCosmo. All rights reserved. Manufactured safely in Gujarat, India.
+                </p>
+                <div class="flex items-center gap-6 text-[11px] text-slate-500">
+                    <a href="#" class="hover:underline hover:text-slate-300">Privacy Policy</a>
+                    <a href="#" class="hover:underline hover:text-slate-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. PRODUCT INFORMATION DATABASE ---
+        const productDb = [
+            {
+                title: "Kumkumadi Radiant Glow Serum",
+                category: "Facial Care",
+                desc: "Formulated adhering strictly to ancient Ashtanga Hridayam scripts. Rich Saffron and active Manjistha root work on early pigmentation and boost cellular defense, resulting in an exceptionally gentle face treatment crafted specifically to stay highly affordable.",
+                ingredients: "Pure Saffron pistils, Sandalwood (Chandan), Manjistha, and organic raw goat milk emulsion.",
+                usage: "Massage 3-4 drops gently over clean, slightly damp skin before sleeping. Leave overnight for complete absorption.",
+                img: "https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                title: "Tejasvi Radiance Face Cream",
+                category: "Facial Care",
+                desc: "A rich daily moisturizer utilizing the deep subcutaneous moisturizing powers of organic cow's ghee. Promotes a youthful, bright skin tone while reinforcing cellular defenses against dry wind micro-irritation.",
+                ingredients: "Pure Clarified Ghee, Sweet Almond Oil, Forest Honey, and fresh Rose hydrosol.",
+                usage: "Gently apply a pea-sized amount onto clean cheeks and neck. Use daily in circular upward strokes.",
+                img: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                title: "Neem & Basil Purifying Gel",
+                category: "Facial Care",
+                desc: "An organic facial wash made without chemical sulfates. It cleanses deeply and clears away dead skin cells without stripping natural hydration, leaving skin thoroughly clean and hydrated.",
+                ingredients: "Therapeutic Neem oil, Tulsi (Holy Basil) extract, Aloe Vera gel, and Cucumber water.",
+                usage: "Lather a small amount onto damp hands. Gently massage onto face for 45 seconds, then rinse with cool water.",
+                img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                title: "Bhringraj & Amla Growth Oil",
+                category: "Hair Care",
+                desc: "An intensive botanical oil that deeply conditions hair and roots. Designed using clean sesame oil to protect hair cuticles from environmental stress, split ends, and dryness.",
+                ingredients: "Bhringraj extract, Amla (Indian Gooseberry), Shikakai fruit, Brahmi, and sesame oil.",
+                usage: "Section dry hair and massage the oil directly into the scalp for 10 minutes. Leave on for 1 hour before washing.",
+                img: "https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                title: "Shikakai & Reetha Cleanser",
+                category: "Hair Care",
+                desc: "Our daily botanical shampoo formulation. It replaces harsh sulfates with natural, organic soapnut extractions (Reetha) to clean hair gently and keep the scalp's pH balanced.",
+                ingredients: "Shikakai pods, Reetha (Soapnut), Red Hibiscus petal distillates, and pure spring water.",
+                usage: "Wet hair thoroughly. Apply a generous amount and massage to create a light, natural froth. Rinse clean.",
+                img: "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                title: "Hibiscus Deep Conditioning Masque",
+                category: "Hair Care",
+                desc: "A luxurious treatment designed to hydrate dry, coarse, or heat-damaged hair. Pure Hibiscus flowers lock in moisture, smoothing out hair strands for a natural, healthy shine.",
+                ingredients: "Hibiscus flower pulp, Coconut Milk, organic honey, Jojoba oil, and Rosemary essence.",
+                usage: "Apply from mid-length to ends after shampooing. Leave on for 10-15 minutes, then rinse with cool water.",
+                img: "https://images.unsplash.com/photo-1527799851257-35939e095184?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                title: "Chandan & Turmeric Body Butter",
+                category: "Skin Care",
+                desc: "A rich skin moisturizer that protects and softens dry skin. Formulated with authentic sandalwood paste and antiseptic turmeric oil, it works to even out skin tone and keep your skin nourished all day long.",
+                ingredients: "Pure Sandalwood (Chandan) paste, Turmeric (Haldi) oil, Shea Butter, Cold-pressed Almond Oil, and Wheatgerm oil.",
+                usage: "Apply liberally over dry areas of the body post-showering. Massage well to let it fully absorb.",
+                img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                title: "Eladi Hydrating Body Lotion",
+                category: "Skin Care",
+                desc: "A lightweight daily body moisturizer containing classical Eladi botanical oils to hydrate dry skin cells, leaving the skin feeling soft and balanced.",
+                ingredients: "Eladi Tailam, Cardamom seed extract, Aloe Vera juice, and organic Vetiver extract.",
+                usage: "Massage smoothly onto body after showering. Reapply as needed throughout the day.",
+                img: "https://images.unsplash.com/photo-1601049676099-e7ed07d825b0?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                title: "Rose & Aloe Refreshing Mist",
+                category: "Skin Care",
+                desc: "An instantly hydrating, cooling body and face spray made with steam-distilled Indian white roses to refresh dry, tired skin.",
+                ingredients: "Indian White Rose hydrosol, pure Aloe Vera extract, and organic Witch Hazel.",
+                usage: "Hold the bottle 8 inches away and mist lightly onto your skin whenever it needs a refreshing hydration boost.",
+                img: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600"
+            }
+        ];
+
+        // --- 2. HEADER BEHAVIOR ---
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('bg-white', 'shadow-md', 'h-16');
+                header.classList.remove('bg-white/95', 'h-20');
+            } else {
+                header.classList.add('bg-white/95', 'h-20');
+                header.classList.remove('shadow-md', 'h-16');
+            }
+        });
+
+        // --- 3. MOBILE MENU TOGGLE ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+
+        // --- 4. CAROUSEL / SLIDER LOGIC ---
+        const sliderTrack = document.getElementById('slider-track');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.getElementById('prev-slide');
+        const nextBtn = document.getElementById('next-slide');
+        let currentSlide = 0;
+        const totalSlides = 3;
+        let slideInterval;
+
+        function updateSlider() {
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            sliderTrack.classList.add('slide-transition');
+            
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('w-8', 'bg-white');
+                    dot.classList.remove('w-3', 'bg-white/40');
+                } else {
+                    dot.classList.add('w-3', 'bg-white/40');
+                    dot.classList.remove('w-8', 'bg-white');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                currentSlide = parseInt(e.target.dataset.slide);
+                updateSlider();
+                resetAutoplay();
+            });
+        });
+
+        // Swipe Gestures for touchscreens
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        sliderTrack.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        sliderTrack.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+
+        function handleSwipe() {
+            const threshold = 50;
+            if (touchStartX - touchEndX > threshold) {
+                nextSlide();
+                resetAutoplay();
+            } else if (touchEndX - touchStartX > threshold) {
+                prevSlide();
+                resetAutoplay();
+            }
+        }
+
+        function startAutoplay() {
+            slideInterval = setInterval(nextSlide, 7000);
+        }
+
+        function resetAutoplay() {
+            clearInterval(slideInterval);
+            startAutoplay();
+        }
+
+        window.onload = function() {
+            startAutoplay();
+        };
+
+
+        // --- 5. PRODUCT CATALOG CATEGORY FILTER LOGIC ---
+        function filterProducts(category) {
+            const items = document.querySelectorAll('.product-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-herbal-900', 'text-white');
+                btn.classList.add('bg-white', 'text-herbal-800', 'hover:bg-herbal-200');
+            });
+
+            const activeBtn = document.getElementById(`btn-filter-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-herbal-800', 'hover:bg-herbal-200');
+                activeBtn.classList.add('bg-herbal-900', 'text-white');
+            }
+
+            items.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                }, 200);
+            });
+        }
+
+        function setProductFilter(category) {
+            filterProducts(category);
+            const targetSection = document.getElementById('products');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+
+        // --- 6. PRODUCT DETAILS MODAL ---
+        const modal = document.getElementById('product-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalCategory = document.getElementById('modal-category');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalIngredients = document.getElementById('modal-ingredients');
+        const modalUsage = document.getElementById('modal-usage');
+        const modalInquireBtn = document.getElementById('modal-inquire-btn');
+
+        function openProductModal(index) {
+            const p = productDb[index];
+            if (!p) return;
+
+            modalImg.src = p.img;
+            modalImg.alt = p.title;
+            modalCategory.innerText = p.category;
+            modalTitle.innerText = p.title;
+            modalDesc.innerText = p.desc;
+            modalIngredients.innerText = p.ingredients;
+            modalUsage.innerText = p.usage;
+
+            modalInquireBtn.onclick = function() {
+                selectProductForInquiry(p.title, p.category);
+                closeProductModal();
+            };
+
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeProductModal() {
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeProductModal();
+            }
+        });
+
+
+        // --- 7. DYNAMIC INQUIRY DESK HANDLERS ---
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successOverlay = document.getElementById('success-overlay');
+        const selectInterest = document.getElementById('interest');
+        const inputProduct = document.getElementById('product-name');
+
+        function selectProductForInquiry(pName, categoryStr) {
+            let dropdownVal = "all";
+            if (categoryStr.includes("Facial")) dropdownVal = "facial";
+            else if (categoryStr.includes("Hair")) dropdownVal = "hair";
+            else if (categoryStr.includes("Skin")) dropdownVal = "skin";
+
+            selectInterest.value = dropdownVal;
+            inputProduct.value = pName;
+
+            const targetSection = document.getElementById('inquiry');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function handleInquirySubmit(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const submitIcon = document.getElementById('submit-icon');
+
+            submitBtn.disabled = true;
+            submitText.innerText = "Processing Inquiry...";
+            submitIcon.className = "fa-solid fa-spinner animate-spin ml-2";
+
+            // Simulating direct safe API network delay response
+            setTimeout(() => {
+                successOverlay.classList.remove('hidden');
+                submitBtn.disabled = false;
+                submitText.innerText = "Submit Dynamic Inquiry";
+                submitIcon.className = "fa-solid fa-paper-plane ml-2";
+            }, 1200);
+        }
+
+        function resetInquiryForm() {
+            inquiryForm.reset();
+            successOverlay.classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
